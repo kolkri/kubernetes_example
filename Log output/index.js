@@ -20,6 +20,12 @@ app.get('/', (req, res) => {
             <h2>Random hash: ${randomHash}</h2>`)
 })
 
+app.get('/pingpong', (req, res) => {
+    let visits = 0
+    res.send(`<h1>Pong ${visits}</h1>`)
+    visits++
+})
+
 app.listen(port, () => {
     console.log(`Server started in port ${port}`)
   })
